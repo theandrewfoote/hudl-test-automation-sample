@@ -129,7 +129,7 @@ tried to create an automation framework that could be extended and scale. Some e
 for the log-in scenarios, but practices like inheritance and composition are vital to creating a robust and resilient 
 automation framework that supports re-use and quick implementation of new tests.
 
-###1. Feature Files
+### 1. Feature Files
 The test scenarios have been written as BDD scenarios using Gherkin syntax. I have tried to ensure the scenarios are 
 understandable to anyone without knowledge of the UI implementation, so they describe the behaviour of the system (ie. 
 WHAT the system does).
@@ -142,12 +142,12 @@ Going forward (with more time and working knowledge of the system), I would cons
 * functional - verification of expected data and configuration post-login (for example, I noticed at time the UI strings 
 showing in different languages)
 
-###2. Step Definitions
+### 2. Step Definitions
 The Step Definitions act as the glue between the Given/When/Then statements in feature files and the Steps classes. 
 The Step Defintions are intended to be simple methods and turn the WHAT of the Given/When/Then statements into HOW to 
 perform those actions.
 
-###3. Steps Classes
+### 3. Steps Classes
 My general approach is firstly to create Steps classes and methods that perform Actions or Assertions. I broke down the 
 classes by logical understanding of the login procs so it should be easy to find methods for re-use. And I added JavaDocs 
 to describe the purpose of each method. The Steps are called from Step Definitions.
@@ -155,7 +155,7 @@ This means the Step Definitions become an imperative style list of instructions 
 performing those instructions.
 In turn, the Steps call off to the Page Object classes.
 
-###4. Page Objects Classes
+### 4. Page Objects Classes
 I attempted to represent the functionality of pages involved in logging into Hudl into Java classes. I used inheritance,
 for example from the LoginPage class to the HudlWebsiteHome class, and used composition to breakdown page content, eg to
 separate out the NavigationBar in order to have more readable code and reliable UI locators.
